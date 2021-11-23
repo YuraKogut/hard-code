@@ -101,7 +101,7 @@ jQuery('.header-humb').on('click', function(){
 })
 
 
-
+//для появи чогось перед загрузкою сторінки
 
   $(window).on('load', function () {
     $preloader = $('.loaderArea'),
