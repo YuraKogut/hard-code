@@ -1,0 +1,996 @@
+/*для того,щоб не було бокових відступів*/
+
+  @font-face {
+    font-family:'ITC Serif Gothic'; /* Имя шрифта */
+    src: url(fonts/serifgothicitcbybt_bold.ttf);
+    src: url(itc-serif-gothic-lt-regular.ttf); /* Путь к файлу со шрифтом */
+   }
+
+body{
+	overflow-x: hidden;
+}
+header{
+	background: black;
+	display: flex;
+	align-items: center;
+	height: 70px;
+	width: 100%;/*це і нижні для фіксованого меню*/
+	position: fixed;
+	z-index: 999;
+}
+
+.container{
+	max-width: 1200px;
+}
+.logo{
+	font-size: 24px;
+}
+.menu{
+	display: flex;
+	padding: 8px 0px;
+	margin-left: 35px;
+	justify-content: space-between;
+}
+li.login a{
+	background: black;
+	color: white;
+	height: 28px;
+	align-items: center;
+	padding: 5px 20px;
+	border: 1px solid #FFFFFF;
+	box-sizing: border-box;
+	border-radius: 4px;
+}
+li.login a:hover{
+	box-shadow: 0px 0px 20px 1px #22fffe;
+	text-shadow: 0px 0px 30px #22fffe;
+	border: none;
+	transition: 0.9s;
+	/*для того щоб текст не рухався*/
+	border: 1px solid transparent;
+}
+.btn-1:hover{
+	box-shadow: 0px 0px 20px 1px greenyellow;
+	transition: 0.9s;
+}
+.btn-2:hover{
+	box-shadow: 0px 0px 20px 1px ghostwhite;
+	transition: 0.9s;
+}
+.btt button:hover{
+	box-shadow: 0px 0px 21px 4px greenyellow;
+	transition: 0.9s;
+}
+header ul{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	list-style: none;
+}
+header a{
+	color: white;
+	font-size: 16px;
+	text-decoration: none;
+}
+a:hover{
+	color: white;
+	border-bottom: 1px solid #4d4d4d; /*лінії під текстом в хедері*/
+	padding-bottom: 5px;/*відступ*/
+	transition: 0.3s;
+}
+.logo:hover{
+	text-decoration: none;
+	border: none;
+}
+.undr:hover{
+	text-decoration: none;
+}
+/* header end */
+
+/*layout-1 картинка+текст*/
+.layout-1{
+	background: black;
+	padding: 134px 0;/*до того було 50px*/
+}
+.layout-1 ul{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	list-style: none;
+}
+.layout-1 a{
+	color: white;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+/* main=текст+кнопка */
+.main{
+	display: flex;
+	flex-direction: column;
+	padding: 70px 0;
+}
+
+h6{
+	font-size: 36px;
+	font-weight: 300;
+	color: white;
+}
+
+.name_course{
+	font-size: 48px;
+	color: white;
+}
+.paragraph{
+	font-size: 16px;
+	font-weight: 300;
+	color: white;
+	letter-spacing: 2px;
+}
+/*кнопка+текст біля неї*/
+.reg{
+	display: flex;
+}
+.btn-1{
+	width: 250px;
+	height: 38px;
+	background: #6DCC0E;
+	border-radius: 4px;
+	border: none;
+	color: white;
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: 500;
+}
+.paragraph-1{
+	margin-left: 25px;
+	font-size: 18px;
+	color: white;
+}
+.paragraph-1 span{
+	color: gray;
+	font-size: 18px;
+}
+/*layout-1 end*/
+
+/*layout-2 текст+блок з описом(хто може брати участь)*/
+.layout-2{
+	padding: 60px 0;
+}
+/*декоративний текст*/
+.about{
+	font-weight: 900;
+	color: black;
+	font-size: 80px;
+	line-height: 0.89;
+}
+.about span{
+	font-weight: 900;
+	-webkit-text-stroke: 2px #363333; /*контури ставить навколо букв*/
+	text-shadow: 0.07em 0 #f9f8f8;
+	color: white;
+	font-size: 76px;
+}
+/*закінчується декаор текст*/
+
+/*блок щоб розсунути блоки*/
+.general{
+	padding-bottom: 100px;
+}
+/*блок з текстом*/
+.descr{
+	border-left: 7px solid #6DCC0E;
+	padding-left: 15px;
+}
+.descr h1{
+	font-size: 90px;
+	font-weight: 900;
+	line-height: 0.80;
+	font-family: 'Roboto';
+}
+.descr h2{
+	font-size: 32px;
+	font-weight: 700;
+	font-family: 'Roboto';
+}
+.descr p{
+	font-weight: 400;
+	font-style: normal;
+	color: #919191;
+	font-family: 'Roboto';
+	font-size: 18px;
+}
+/*layout-2 end*/
+
+/*layout-3 текст+кружечки+форма()фото*/
+
+.layout-3{
+	padding-bottom: 32px;
+}
+/*текст*/
+.attend h1{
+	font-size: 24px;
+	font-family: 'Roboto';
+	font-weight: 900;
+}
+/*кружечки*/
+.categories {
+	display: flex;
+}
+
+.category {
+	background: #6DCC0E;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	text-decoration: none;
+	margin: 8.5px;
+}
+
+.category__image {
+	width: 54%;
+	height: auto;
+	margin: 10px 12px 0;
+}
+.categories a:hover{
+	color: whitesmoke;
+	opacity: 0.8;
+	transition: 0.4s;
+	border: none;
+}
+/*кінець кружечків*/
+/*форма*/
+.block{
+	display: flex;
+	justify-content: end;
+	padding: 10px;
+}
+#prev,#next{
+	border: none;
+	background: none;
+}
+#count,#text{
+	font-size: 19px;
+	font-weight: 600;
+}
+.modern{
+	font-size: 19px;
+	font-weight: 600;
+	padding-left: 6px;
+    padding-right: 6px;
+}
+/*взятий з бібліотеки*/
+.slick-list{
+	z-index: 4;
+}
+
+			.block-slider .your-class{
+				position: relative;
+			}
+			.block-slider .your-class::before{
+				content: '';/*щоб відобразило в html*/
+				display: block;
+				width: 148px;
+				height: 148px;
+				background: #6DCC0E;;
+				position: absolute;
+				top: -17px;
+				right: -17px;
+			}
+			.block-slider .your-class::after{
+				content: '';/*щоб відобразило в html*/
+				display: block;
+				width: 250px;
+				height: 250px;
+				background: #6DCC0E;
+				position: absolute;
+				bottom: -40px;
+				left: -40px;
+			}
+
+			/*для другого слайду квадратики*/
+.position-1{
+	position: relative;
+	padding: 50px 0;
+}
+	.position-1 .your::before{
+				content: '';/*щоб відобразило в html*/
+				display: block;
+				width: 148px;
+				height: 148px;
+				background: #6DCC0E;;
+				position: absolute;
+				top: -17px;
+				right: -17px;
+			}
+			.position-1 .your::after{
+				content: '';/*щоб відобразило в html*/
+				display: block;
+				width: 250px;
+				height: 250px;
+				background: #6DCC0E;
+				position: absolute;
+				bottom: -40px;
+				left: -40px;
+			}
+/*кінець форми*/
+/*стрілки+текст між ними*/
+
+/*layout-3 end*/
+
+/*layout-4 текст+4 форми()*/
+.layout-4{
+	background: black;
+	color: white;
+	padding: 90px 0;
+}
+
+.whom__title span{
+	font-style: normal;
+	font-weight: 900;
+	font-size: 80px;
+	line-height: 84px;
+	color: white;
+	text-transform: uppercase;
+	display: block;
+}
+
+.whom__title span.stroked{
+	color: transparent;
+	-webkit-text-stroke: 1px white;
+}
+
+
+
+.whom__item{
+padding-right: 30px;
+padding-bottom: 40px;
+}
+.whom__item .title{
+font-family: Roboto;
+font-style: normal;
+font-weight: 900;
+font-size: 22px;
+text-transform: uppercase;
+color: white;
+margin-bottom: 12px;
+}
+.whom__item .descrp{
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+color: #FFFFFF;
+}
+
+.whom__item .thumb{
+	position: relative;
+	margin-bottom: 20px;
+}
+.whom__item .poster{
+	position: relative;
+	background: red;
+	height: 194px;
+	z-index: 2;
+	background-size: cover;
+}
+
+/*psevdoklasu*/
+.whom__item .thumb::before{
+	content: '';/*щоб відобразило в html*/
+	display: block;
+	width: 52px;
+	height: 52px;
+	background: white;
+	position: absolute;
+	top: -7px;
+	z-index: 1;
+	left: -7px;
+}
+.whom__item .thumb::after{
+	content: '';/*щоб відобразило в html*/
+	display: block;
+	width: 120px;
+	height: 120px;
+	background: #6DCC0E;
+	position: absolute;
+	bottom: -15px;
+	right: -15px;
+	z-index: 1;
+}
+/*layout-4 end*/
+
+/*layout 5 зелений блок з текстом і кнопкою*/
+.layout-5{
+	padding: 50px 0;
+}
+/*блок зелений*/
+.kv-block{
+	background: #6DCC0E;
+	padding: 32px 90px ;
+}
+/*кнопка*/
+.btn-2{
+	width: 329px;
+	height: 48px;
+	background: #FFFFFF;
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+	border: none;
+	color: black;
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: 500;
+	font-family: 'Roboto';
+}
+/*текст під кнопкою*/
+.paragraph-2{
+	font-size: 16px;
+	margin: 0;
+	line-height: 2;
+	color: white;
+	font-weight: 500;
+	font-family: 'Roboto';
+	background-image: url(./img/fire.svg);
+	background-size: 18px;
+	background-repeat: no-repeat;
+	background-position: 15px 4px;
+	padding-left: 35px;
+}
+@media (max-width: 640px){
+	.kv-block{
+		width: 100%;
+	}
+}
+@media (max-width: 1185px){
+	.kv-block{
+		width: 100%;
+	}
+	
+}
+@media (max-width: 996px){
+	.kv-block{
+		width: 95%;
+	}
+}
+@media(max-width: 840px){
+	.tex p{
+		font-size: 20px!important;
+	}
+	.tex h1{
+		font-size: 30px!important;
+	}
+}
+@media(max-width: 560px){
+	.block-slider{
+		padding: 20px 0;
+	}
+	.about{
+		font-size: 60px;
+	}
+	.about span{
+		font-size: 50px;
+	}
+}
+/*layout-5 end*/
+
+/*layout-6 текст + 3 блока */
+.layout-6{
+	padding-bottom: 70px;
+}
+.blck{
+width: 366px;
+height: 403px;
+background: #FFFFFF;
+box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+margin: 10px;
+}
+.img-ar{
+padding: 60px;
+  padding-bottom: 0;
+}
+.img-ar img{
+	width: 18%;
+}
+.ins-text{
+	padding: 15px;
+    padding-left: 66px;
+}
+.img-ar-2 .face{
+	display: flex;
+    float: right;
+    position: relative;
+    border-radius: 50%;
+    margin-top: 0;
+    margin-left: 10px;
+}
+.img-ar-2{
+	margin: 10px;
+}
+.img-ar-2 img{
+	border-radius: 50%;
+}
+.foot-text{
+	    padding: 10px;
+}
+.name{
+	    display: flex;
+margin: 0;
+    justify-content: end;
+}
+.position-his{
+	display: flex;
+    justify-content: end;
+}
+#prv,#nxt{
+    border: none;
+    background: none;
+}
+#coun,#txt{
+	font-size: 19px;
+    font-weight: 600;
+}
+.modern-2{
+	font-size: 19px;
+    font-weight: 600;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+/*end layout-6*/
+
+/*layout-7 форма і текст збоку*/
+
+.layout-7{
+	background: black;
+	padding: 129px 0;
+}
+.fa-instagram,.fa-facebook-f{
+	color: white;
+	font-size: 30px;
+}
+.foot-menu{
+	padding: 30px 0;
+}
+.foot-menu p{
+font-family: Roboto;
+font-style: normal;
+font-weight: 300;
+font-size: 20px;
+color: #FFFFFF;
+}
+.foot-menu span{
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+color: #FFFFFF;
+}
+.icon{
+	letter-spacing: 10px;
+}
+
+
+
+.form-1{
+	position: relative;
+	padding: 10px 0;
+}
+.form-bg-1{
+	width: 635px;
+  height: 501px;
+	min-height: 100px;
+	background: #FFFFFF;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+	position: relative;
+	z-index: 2;
+}
+@media(max-width: 1300px ){
+	.form-bg-1{
+		width: 520px;
+	}
+	.kvadrat-1.two{
+		right: 23px!important;
+	}
+	.btt button{
+		width: 482px!important;
+	}
+	.form-content h1{
+		font-size: 25px!important;
+	}
+}
+@media(max-width: 1070px){
+	.form-bg-1{
+		width: 420px;
+	}
+		.kvadrat-1.two{
+		right: 5px!important;
+	}
+	.btt button{
+		width: 380px!important;
+	}
+	.form-content h1{
+		font-size: 20px!important;
+	}
+}
+
+@media(max-width: 960px){
+		.kvadrat-1.two{
+		right: -54px!important;
+	}
+}
+
+
+.form-content{
+	padding: 35px;
+}
+.form-content h1{
+	  font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 37px;
+}
+.form-content span{
+	  color: #6DCC0E;
+    font-weight: 700;
+}
+.kvadrat-1{
+	width: 250px;
+	height: 250px;
+	background: #6DCC0E;
+	position: absolute;
+	bottom: -31px;
+  left: -37px;
+	z-index: 1;
+}
+.kvadrat-1.two{
+	top: initial;
+	left: initial;
+	top: -6px;
+	right: -76px;
+	width: 148px;
+	height: 148px;
+}
+/*лейбли*/
+.labl{
+	padding: 20px;
+}
+.form-label {
+    padding-left: 11px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    border-radius: 0px;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 2px solid black;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+  }
+.form-control.contr {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    border-radius: 0px;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    border-left: none;
+    border-right: none;
+    border-color: #6DCC0E;
+    border-top: none;
+  }
+  /*щоб забрати обводку при кліку*/
+  .form-control:focus {
+  	border-color: none!important;
+  	box-shadow: none!important;
+  }
+  .lbl-1{
+  	color: #6DCC0E;
+  	font-family: Roboto;
+  	font-style: normal;
+  	font-weight: 500;
+  	font-size: 16px;
+  	line-height: 19px;
+  }
+  .lbl-2{
+  	font-family: Roboto;
+  	font-style: normal;
+  	font-weight: 500;
+  	font-size: 16px;
+  	line-height: 19px;
+  	color: #999999;
+  }
+/*кінець лейблів*/
+.btt{
+	padding: 20px;
+}
+.btt button{
+  background: #6DCC0E;
+    box-shadow: 0px 4px 20px rgb(0 0 0 / 15%);
+    border-radius: 4px;
+    width: 586px;
+    color: white;
+    height: 56px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    border: 1px solid #6DCC0E;
+    padding: 0;
+}
+/*
+* {
+   outline: 1px solid rebeccapurple;
+} можна додати,щоб побачити який елемент вилазить*/
+
+
+/*для меню із зникаючим меню та кнопкою*/
+.hum{
+	display: flex;
+	justify-content: end;
+	padding: 27px 0;
+
+}
+.header-humb{
+	border: none;
+	background: none; position: fixed;
+	z-index: 1000;
+}
+button.header-humb div{
+	width: 32px;
+	height: 1px;
+	background: #fff;
+	margin-bottom: 10px;
+	position: relative;
+}
+@media(max-width: 990px){
+ .menu{
+ 	position: fixed;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		background: black;
+		height: 100vh;
+		width: 101%;
+		padding: 58px;
+		right: 0;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		transform:translateX(-115%);
+		transition: 0.6s;
+ }
+ .logo{
+ 	position: relative;
+ 	z-index: 1000000!important;
+ }
+.d-none{
+	display: block!important;
+}
+ .hum{
+ 	display: block!important;
+ 	text-align: end;
+    padding: 8px;
+ }
+	.opened{
+		transform: translateX(-7%);
+		transition: 0.6s;
+		width: 106%;
+	}
+}
+@media(max-width: 575px){
+	.header-humb{
+		    right: 26px;
+    top: 20px;
+	}
+}
+section.footter{
+	 background: black;
+     box-shadow: 0 0 20px 0 navy;
+     padding: 25px 0;
+}
+.footer-text a{
+	text-decoration: none;
+	color: white;
+}
+.ft-lg a{
+	text-decoration: none;
+	color: white;
+}
+.byline span {
+  animation: spin-letters 10s linear infinite;
+}
+.byline {
+  animation: move-byline 10s linear infinite;
+}
+
+/* Keyframes */
+
+
+
+
+@keyframes move-byline {
+  0% {
+    transform: translateZ(5em);
+  }
+  100% {
+    transform: translateZ(0);
+  }
+}
+
+/* Make the 3D work on the container */
+.hard-demo {
+  perspective: 800px;
+  transform-style: preserve3d;
+}
+
+/* General styles and layout */
+section.animation {
+background: black;
+box-shadow: 0 0 20px 0 navy;
+}
+.ingeneral{
+	position: relative;
+	margin: 172px 0;
+}
+.hard-demo {
+  height: 17em;
+  left: 50%;
+  position: absolute;
+  top: 53%;
+  transform: translate(-50%, -50%);
+  width: 34em;
+}
+
+.byline span {
+  display: inline-block;
+}
+
+.hard img {
+  width: 100%;
+}
+
+ .byline {
+  position: absolute;
+}
+
+
+.byline {
+  color: #fff;
+  font-family: "ITC Serif Gothic", Lato;
+  font-size: 4.25em;
+  left: -2em;
+  letter-spacing: 0.4em;
+  right: -2em;
+  text-align: center;
+  text-transform: uppercase;
+  top: 29%;
+}
+
+/*** Media queries for adjusting to different screen sizes ***/
+
+@media only screen and (max-width: 600px) {
+  .hard-demo {
+    font-size: 10px;
+  }
+  .byline{
+  	font-size: 2.25rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .hard-demo {
+    font-size: 7px;
+  }
+}
+.menu-1{
+	list-style: none;
+    letter-spacing: 1px;
+    line-height: 2;
+}
+.menu-1 li a{
+	text-decoration: none;
+	color: white;
+	margin-bottom: 15px;
+    opacity: 0.6;
+    transition: color 200ms ease, opacity 200ms ease;
+    font-size: 14px;
+    text-decoration: none;
+}
+.menu-1 li a:hover{
+	border-bottom: 1px solid white;
+	padding-bottom: 5px;
+	transition: 0.3s;
+}
+.menu-1 li.important{
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.all-foot{
+	display: flex;
+}
+@media(max-width: 768px){
+	.all-foot{
+		display: block!important;
+	}
+	.menu-1{
+		padding: 30px 0;
+	}
+	}
+
+
+
+	/*preloader*/
+  .loaderArea {
+  background: linear-gradient(90deg, black 10%, black 90%);
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right:0;
+  bottom:0;
+  z-index: 100000;
+}
+.loader h1{
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  left: 27%;
+  text-align: center;
+  font-size: 100px;
+  font-weight: 500;
+  margin-left: -20px;
+  color: white;
+  top: 30%;
+  margin-top: -20px;
+}
+
+@media(max-width: 965px){
+	.loader h1{
+		font-size: 60px;
+		left: 35%;
+	}
+}
+@media(max-width: 760px){
+	.loader h1{
+		font-size: 60px;
+		left: 27%;
+	}
+}
+@media(max-width: 760px){
+	.loader h1{
+		font-size: 60px;
+		left: 17%;
+	}
+}
+
+
+
+
